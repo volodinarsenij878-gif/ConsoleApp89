@@ -1,0 +1,26 @@
+﻿    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace Program45
+    {
+    internal class Program
+    {
+        static void Main()
+        {
+            // Допустим, это ввод от пользователя (может быть пустым или null)
+            string userInput = "";
+
+            userInput = "значение по умолчанию";
+
+            // Если пользователь ввёл пустоту (не null!), ??= не сработает,
+            // поэтому добавим проверку на пустую строку отдельно:
+            if (string.IsNullOrEmpty(userInput))
+                userInput = "значение по умолчанию";
+
+            Console.WriteLine($"Итоговое значение: {userInput}");
+        }
+    }
+    }
